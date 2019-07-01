@@ -1,0 +1,65 @@
+*{
+    box-sizing: border-box
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.9;
+}
+
+nav,footer{
+    padding: 1% 0;
+    background-color: lightslategrey;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+header {
+    padding: 8% 0;
+  }
+
+article{
+    padding: 3% 0;
+    background-color: aliceblue;
+}
+
+
+section {
+    float: left;
+    width: 28%;
+    min-height: 100px;
+    padding: 4% 0;
+    background-color: #bbb;
+}
+
+footer {
+    clear: both;
+    margin-bottom: 0;
+}
+
+header,
+section,
+aside,
+footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+
+
+
+/*tablet and desktop mode*/
+
+@media only screen and (max-width: 600px){
+    section{
+        float: none;
+        width: 100%;
+    }
+
+}
