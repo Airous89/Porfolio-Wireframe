@@ -3,63 +3,105 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'exo', sans-serif;
     text-align: center;
     font-size: 20px;
     line-height: 1.9;
+    padding: 30px;
 }
 
-nav,footer{
-    padding: 1% 0;
-    background-color: lightslategrey;
-}
-
-nav{
+header {
+    background-color: black;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0 0 25px 0 black;
 }
 
-header {
-    padding: 8% 0;
-  }
+header *{
+    display: inline;
+}
+
+header li{
+    margin: 20px;
+}
+
+header li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.name{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navbar li{
+  justify-content: flex-end;
+  align-items: flex-end;
+  list-style: none
+
+}
+
+
 
 article{
     padding: 3% 0;
-    background-color: aliceblue;
+    height: 400px;
 }
 
+.wrapper{
+    display: flex;
+    flex-direction: column;
+}
 
-section {
-    float: left;
-    width: 28%;
-    min-height: 100px;
-    padding: 4% 0;
-    background-color: #bbb;
+.apps-1{
+    background-color: #F05E5E;
+}
+
+.apps-2{
+    background-color: #F4B640;
+}
+
+.apps-3{
+    background-color: #3464CE;
 }
 
 footer {
     clear: both;
     margin-bottom: 0;
+    padding: 1% 0;
+    background-color: black;
+    color: aliceblue;
 }
 
-header,
-section,
-aside,
-footer {
-  margin: 0 1.5% 24px 1.5%;
-}
 
 
 
 /*tablet and desktop mode*/
 
-@media only screen and (max-width: 600px){
-    section{
-        float: none;
-        width: 100%;
+@media only screen and (min-width: 600px) {
+    .wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 240px;
     }
 
+    .apps-1{
+        flex: 0 0 33%;
+    }
+
+    .apps-2{
+        flex: 1;
+    }
+
+    .apps-3{
+        flex: 1;
+    }
 }
