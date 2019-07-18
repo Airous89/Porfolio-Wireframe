@@ -10,7 +10,7 @@ body{
     padding: 30px;
 }
 
-header {
+.navbar {
     background-color: black;
     position: fixed;
     top: 0;
@@ -23,25 +23,26 @@ header {
     box-shadow: 0 0 25px 0 black;
 }
 
-header *{
+.navbar *{
     display: inline;
 }
 
-header li{
+.navbar li{
     margin: 20px;
 }
 
-header li a{
+.navbar li a{
     color: aliceblue;
     text-decoration: none;
 }
 
-.name{
+.logo .name{
     color: aliceblue;
     text-decoration: none;
+    text-align: left;
 }
 
-.navbar li{
+.navbar .links{
   justify-content: flex-end;
   align-items: flex-end;
   list-style: none
@@ -50,10 +51,12 @@ header li a{
 
 
 
-article{
-    padding: 3% 0;
-    height: 400px;
+header{
+    padding: 35px;
+    height: 600px;
+    font-family: 'Vollkorn', serif;
 }
+
 
 .wrapper{
     display: flex;
@@ -77,6 +80,48 @@ footer {
     margin-bottom: 0;
     padding: 1% 0;
     background-color: black;
+    color: aliceblue;
+}
+
+.collapsible {
+    background-color: black;
+    color: whitesmoke;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ccc;
+}
+
+.collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+ .content{
+    padding: 0 18px;
+    background-color: black;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+footer li a{
+    list-style: none;
+    text-decoration: none;
     color: aliceblue;
 }
 
@@ -104,4 +149,9 @@ footer {
     .apps-3{
         flex: 1;
     }
+
+    .collapsible {
+        display: none
+    }  
+
 }
